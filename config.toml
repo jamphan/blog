@@ -1,0 +1,31 @@
+baseURL = "http://jamphan.dev"
+languageCode = "en-us"
+title = "jamphan.dev"
+theme = "cactus"
+
+[params]
+
+  colortheme = "white" # dark, light, white, or classic
+  mainSection = "posts"
+  description = "Hi there! My name is Jamie. I'm a software engineer that likes to learn new development tools, and spend too much time researching about an assortment of random topics I find interesting. I've decided to post them on the interenet to share with you; I hope you find it interesting :)"
+
+# Main menu which appears below site header.
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Writings"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
