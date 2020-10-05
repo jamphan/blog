@@ -3,12 +3,6 @@ languageCode = "en-us"
 title = "jamphan.dev"
 theme = "cactus"
 
-[params]
-
-  colortheme = "white" # dark, light, white, or classic
-  mainSection = "posts"
-  description = "Hi there! My name is Jamie. I'm a software engineer that likes to learn new development tools, and spend too much time researching about an assortment of random topics I find interesting. I've decided to post them on the interenet to share with you; I hope you find it interesting :)"
-
 # Main menu which appears below site header.
 [[menu.main]]
 name = "Home"
@@ -29,3 +23,17 @@ weight = 3
 name = "About"
 url = "/about"
 weight = 4
+
+[params]
+
+  colortheme = "white" # dark, light, white, or classic
+  mainSection = "posts"
+  tagsOverview = true
+  description = "Hi there! My name is Jamie. I'm a software engineer that likes to learn about development and computing in general. I spend too much time researching about an assortment of random topics I find interesting and I've decided to post them on the internet to share with you. I hope you find it interesting :)"
+
+  [[params.social]]
+    name = "linkedin"
+    link = "https://www.linkedin.com/in/jamie-kt-phan/"
+  [[params.social]]
+    name = "email"
+    link = "spam@jamphan.dev"  # no need for "mailto:" in the head
