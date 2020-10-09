@@ -1,0 +1,1 @@
+D:\Applications\Hugo\extended\hugo.exe $args
