@@ -16,5 +16,5 @@ draft: false
     - Dish is Vietnamese Cơm tấm (Broken Rice),
     - Sport to watch is Formula 1.
 
-**My CV:** [PhanJ_CV_2020-09.pdf](/about/PhanJ_CV_2020-09.pdf)
+**My CV:** [PhanJ_CV_2021-06.pdf](/about/PhanJ_CV_2021-06.pdf)
 
