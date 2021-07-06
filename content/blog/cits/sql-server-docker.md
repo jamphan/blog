@@ -12,6 +12,12 @@ toc: true
 
 {{< tldr "A brief tutorial on setting up a persistent SQL-Server database container with docker and docker-compose for use in development projects." >}}
 
+In this tutorial, we're going to setup a docker image for running a SQL-Server database.
+This will be useful for prototyping/developing containerized applications that require a database and where local storage options such as SQLite won't do.
+
+In the end, we'll have a simple docker image that can be brought up with docker-compose alongside your app.
+We'll make sure its easy to configure, and that the persistent data can be managed easily.
+
 ## Downloads and Installations
 
 - **Install: Docker Desktop**: this will provide the docker engine and the useful desktop interface for managing your containers and images. See [docker.com](https://www.docker.com/products/docker-desktop).
@@ -21,6 +27,7 @@ toc: true
 ## Project layout
 
 I like to keep this database docker image, or similar images, in its separate `db/` folder as I can organise it with other applications, like a web-service for example.
+
 This project will be laid out as follows:
 
 ```
@@ -86,7 +93,9 @@ DB_USER=
 DB_PASSWORD=
 ```
 
-Fill in the values as you deem fit, and make sure to keep this secret! Below is a table of their usage:
+Fill in the values as you deem fit, and make sure to keep this secret!
+
+Below is a table of their usage:
 
 |Env. var|Usage|
 |---|---|
@@ -198,7 +207,7 @@ To connect to the database, simply open **Microsoft SQL Server Management Studio
 |**Server name**|127.0.0.1, 1433|
 |**Authentication**|SQL Server Authentication|
 |**Login**|<Whatever you set `DB_USER` to equal in `mssql.env`>|
-|**Login**|<Whatever you set `DB_PASSWORD` to equal in `mssql.env`>|
+|**Password**|<Whatever you set `DB_PASSWORD` to equal in `mssql.env`>|
 
 Don't forget to stop and remove the image when you're done with it:
 
@@ -246,6 +255,8 @@ cd root/
 docker-compose up
 ```
 
+N.b. make sure your previous container during testing is down, or you might see `0.0.0:1433 failed: port is already allocated`.
+
 With this image up -- similar to the testing section -- open **Microsoft SQL Server Management Studio** (SSMS) and enter the values when trying to connect to a new server:
 
 |Field|Value|
@@ -254,9 +265,10 @@ With this image up -- similar to the testing section -- open **Microsoft SQL Ser
 |**Server name**|127.0.0.1, 1433|
 |**Authentication**|SQL Server Authentication|
 |**Login**|<Whatever you set `DB_USER` to equal in `mssql.env`>|
-|**Login**|<Whatever you set `DB_PASSWORD` to equal in `mssql.env`>|
+|**Password**|<Whatever you set `DB_PASSWORD` to equal in `mssql.env`>|
 
-N.b. make sure your previous container during testing is down, or you might see `0.0.0:1433 failed: port is already allocated`
+
+You'll notice that the folder `db-data/` will be populated now. This is where the database storage is now pointing to.
 
 ## Wrap-up
 Now we have a simple database container we can use for prototyping/development and persist the storage.
