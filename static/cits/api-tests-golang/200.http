@@ -1,0 +1,9 @@
+GET http://localhost:3000/hello HTTP/1.1
+Accept: text/plain
+
+
+HTTP/1.1 200 OK
+Request-Id: Some-Request-ID
+Service-Name: Demo
+
+Hello, World!

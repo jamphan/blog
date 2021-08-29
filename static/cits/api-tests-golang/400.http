@@ -1,0 +1,8 @@
+GET http://localhost:3000/hello HTTP/1.1
+Accept: application/json
+
+HTTP/1.1 400 Bad Request
+Request-Id: Some-Request-ID
+Service-Name: Demo
+
+Must set accept to text/plain
