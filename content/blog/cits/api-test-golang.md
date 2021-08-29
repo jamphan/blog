@@ -50,7 +50,7 @@ So I wanted to use these files to specify a series of contract tests against a d
 
 ## Implementation Overview
 
-It's a pretty simply Go script, with three key components/steps:
+It's a pretty simple Go script, with three key components/steps:
 
 1. Define a test case type that has the HTTP request to make and the expected response. We define a method to compare the two here.
 2. Define a parsing function that parses `.http` files into the test case type (with the `net/http` Request and expected response)
